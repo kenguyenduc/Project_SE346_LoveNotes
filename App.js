@@ -1,49 +1,82 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {
+} from 'react-native';
+import { 
+  Container,
+  Header, 
+  Title, 
+  Content, 
+  Footer, 
+  FooterTab, 
+  Button, 
+  Left, 
+  Right, 
+  Body, 
+  Icon, 
+  Text,
+  Badge,
+  Fab,
+  View
+} from 'native-base';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import Notes from './src/components/Notes'
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {  
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+      <Container>
+        <Header>
+          <Left>
+            <Button transparent>
+              <Icon name='settings' />
+            </Button>
+          </Left>
+
+          <Body>
+            <Title>LoveNotes</Title>
+          </Body>
+
+          <Right>
+            <Button transparent>
+              <Icon name='search' />
+            </Button>
+          </Right>
+        </Header>
+
+        <Content>
+          <Notes/>
+        </Content>
+
+        <View style={{ flex: 1 }}>
+            <Fab direction="up" position="bottomRight">
+              <Icon name="md-add"/>
+            </Fab>
+        </View>
+        
+        <Footer>
+          <FooterTab>
+
+            <Button badge>
+              <Badge success><Text>2</Text></Badge> 
+              <Icon name="notifications"/>
+              <Text>On this day</Text>
+            </Button>
+
+            <Button>
+              <Icon name="paper" />
+              <Text>Notes</Text>
+            </Button>
+
+            <Button active>
+              <Icon active name="pulse"/>
+              <Text>How far?</Text>
+            </Button>
+
+          </FooterTab>
+        </Footer>
+      
+      </Container>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
