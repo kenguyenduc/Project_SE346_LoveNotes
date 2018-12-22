@@ -9,7 +9,13 @@ import {
     Text
 } from 'react-native';
 
-export default class Onthisday extends Component{
+export default class LoveCountScreen extends Component{
+    static navigationOptions = {
+        title: 'How far ?',
+        headerTitleStyle: {
+            textAlign: 'center',flex:1
+        },
+      }
     render(){
         return(
             <Container>
@@ -17,10 +23,10 @@ export default class Onthisday extends Component{
                     hiihhihihiih
                 </Text>
                 <Text>
-                    Onthisday
+                    Love Count
                 </Text>
                 <Text>
-                    Onthisday
+                    Love Count
                 </Text>
             </Container>
         );
