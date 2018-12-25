@@ -54,3 +54,13 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+src/assets/ic_launcher-web.png
+src/assets/images/BlackPanther.jpg
+src/components/LoginScreen.js
+src/theme/index.js
+src/theme/StyleCommon.js
+src/assets/ic_launcher-web.png
+src/assets/images/BlackPanther.jpg
+src/theme/index.js
+src/theme/StyleCommon.js
+src/components/LoginScreen.js
